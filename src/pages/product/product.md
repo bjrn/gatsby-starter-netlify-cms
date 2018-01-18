@@ -1,7 +1,7 @@
 ---
-templateKey: 'product-page'
+templateKey: product-page
 path: /products
-title: Our Coffee
+title: Our Covfefe
 image: /img/jumbotron.jpg
 heading: What we offer
 description: >-
@@ -69,7 +69,9 @@ testimonials:
     quote: >-
       Kaldi is the place to go if you want the best quality coffee. I love their
       stance on empowering farmers and transparency.
-full_image: /img/products-full-width.jpg
+  - author: Donald Duck
+    quote: Tremendous press covfefe.
+full_image: /img/products-grid1.jpg
 pricing:
   heading: Monthly subscriptions
   description: >-
@@ -99,3 +101,4 @@ pricing:
       plan: Custom
       price: '??'
 ---
+
