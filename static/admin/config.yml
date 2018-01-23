@@ -27,23 +27,21 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Question", name: "title", widget: "string"}
       - {label: "Answer", name: "answer", widget: "markdown"}
-    #  - {label: "Category", name: "category", widget: "relation", collection: "faq-categories", searchFields: "[name, slug]", valueField: "slug"}
       - {
-          label: "Category",
-          name: "category",
-          widget: "select",
-          options:
-            - { label: "Cat A", value: "A" }
-            - { label: "Cat B", value: "B" }
-            - { label: "Cat C", value: "C" }
-      }
-
+          label: "Category", 
+          name: "category", 
+          widget: "select", 
+          options: [
+              { label: "Cat A", value: "A" },
+              { label: "Cat B", value: "B" },
+              { label: "Cat C", value: "C" }
+          ]
+        }
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    filter: {field:"language", value:"en"}
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Path", name: "path", widget: "string"}
