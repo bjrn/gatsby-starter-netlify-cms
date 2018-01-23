@@ -21,6 +21,8 @@ collections:
   - name: "faq"
     label: "FAQ"
     folder: src/pages/faq
+    format: "json"
+    extension: "json"
     create: true
     slug: "{{slug}}"
     fields:
