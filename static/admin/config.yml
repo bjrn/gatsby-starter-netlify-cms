@@ -11,16 +11,6 @@ collections:
   - name: "faq"
     label: "FAQ"
     folder: src/pages/faq
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Question", name: "title", widget: "string"}
-      - {label: "Answer", name: "answer", widget: "markdown"}
-      - {label: "Category", name: "category", widget: "relation", collection: "faq-categories", searchFields: "[name, slug]", valueField: "slug"}
-  - name: "faq"
-    label: "FAQ"
-    folder: src/pages/faq
     format: "json"
     extension: "json"
     create: true
@@ -39,6 +29,7 @@ collections:
               { label: "Cat C", value: "C" }
           ]
         }
+      - {label: "Tags", name: "tags", widget: "relation", collection: "partners", searchFields: "[name]", valueField: "name"}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -55,6 +46,17 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - name: "partners"
+        label: "Partners"
+        file: "_data/partners.yml"
+        description: "Partners"
+        fields:
+          - name: partners
+            label: Partners
+            label_singular: "Partner"
+            widget: list
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
       - file: "src/pages/about/about.md"
         label: "About"
         name: "about"
