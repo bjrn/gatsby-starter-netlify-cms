@@ -19,6 +19,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Question", name: "title", widget: "string"}
       - {label: "Answer", name: "answer", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "relation", collection: "partners", searchFields: ["name"], valueField: "name"}
       - {
           label: "Category", 
           name: "category", 
@@ -29,7 +30,6 @@ collections:
               { label: "Cat C", value: "C" }
           ]
         }
-      - {label: "Tags", name: "tags", widget: "relation", collection: "partners", searchFields: "[name]", valueField: "name"}
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -42,6 +42,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "relation", collection: "partners", searchFields: ["name", "description"], valueField: "name"}
   - name: "config"
     label: "Config"
     files:
@@ -55,9 +56,9 @@ collections:
             label: Partners
             label_singular: "Partner"
             widget: list
-            
             fields:
               - {label: "Name", name: "name", widget: "string"}
+              - {label: "Description", description: "describe it" name: "description", widget: "string", required: false}
   - name: "pages"
     label: "Pages"
     files:
