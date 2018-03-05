@@ -42,21 +42,25 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-
-  - name: "pages"
-    label: "Pages"
+  - name: "config"
+    label: "Config"
     files:
       - name: "partners"
         label: "Partners"
         file: "_data/partners.yml"
         description: "Partners"
+        preview: false
         fields:
           - name: partners
             label: Partners
             label_singular: "Partner"
             widget: list
+            
             fields:
               - {label: "Name", name: "name", widget: "string"}
+  - name: "pages"
+    label: "Pages"
+    files:
       - file: "src/pages/about/about.md"
         label: "About"
         name: "about"
