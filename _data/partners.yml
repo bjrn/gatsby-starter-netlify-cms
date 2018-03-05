@@ -4,3 +4,5 @@ partners:
   - name: ghi
   - name: jkl
   - name: all
+  - description: very long partner name
+    name: helloworld
