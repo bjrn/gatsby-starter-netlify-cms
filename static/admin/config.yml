@@ -43,14 +43,20 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "relation", collection: "partners", searchFields: ["name", "description"], valueField: "name"}
+    meta:
+      - {label: "SEO Description", name: "description", widget: "text"}
   - name: "config"
     label: "Config"
+    delete: false
+    editor:
+      preview: false
     files:
       - name: "partners"
         label: "Partners"
         file: "_data/partners.yml"
         description: "Partners"
-        preview: false
+        editor:
+          preview: false
         fields:
           - name: partners
             label: Partners
