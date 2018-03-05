@@ -58,7 +58,7 @@ collections:
             widget: list
             fields:
               - {label: "Name", name: "name", widget: "string"}
-              - {label: "Description", description: "describe it" name: "description", widget: "string", required: false}
+              - {label: "Description", description: "describe it", name: "description", widget: "string", required: false}
   - name: "pages"
     label: "Pages"
     files:
