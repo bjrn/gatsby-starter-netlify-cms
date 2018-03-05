@@ -54,7 +54,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - { name: "tags", label: "Tags", widget: "relation", collection: "meta", entry: "tags", searchFields: ["tags"], multiselect: true }
+      - { name: "tags", label: "Tags", widget: "relation", collection: "meta", entry: "tags", searchFields: ["tags"], valueField: "tags", multiselect: true }
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
   - name: "config"
