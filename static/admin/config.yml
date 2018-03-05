@@ -8,6 +8,18 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: meta
+    label: Meta
+    files:
+      - name: tags
+        label: Tags
+        file: _data/tags.yml
+        fields:
+          - name: tags
+            label: Tags
+            widget: list
+            fields: [{ name: tag, label: Tag }]
+
   - name: "faq"
     label: "FAQ"
     folder: src/pages/faq
@@ -42,7 +54,13 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "relation", collection: "partners", searchFields: ["name", "description"], valueField: "name"}
+      - name: tags
+        label: Tags
+  		  widget: relation
+  		  collection: meta
+  		  entry: tags
+  		  searchFields: ['tags']
+  		  multiselect: true
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
   - name: "config"
