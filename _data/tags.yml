@@ -1,5 +1,5 @@
-- { tag: my-tag }
-- { tag: another-tag }
-- { tag: all }
-- { tag: ab }
-- { tag: cd }
+tags:
+  - tag: abcdef
+  - tag: qwerty
+  - tag: another-tag
+  - tag: such-nice
