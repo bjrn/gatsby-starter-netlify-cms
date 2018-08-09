@@ -50,3 +50,6 @@ npm install --global --production windows-build-tools
 ```
 
 [Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTUxNzk3NDY2NV19
+-->
